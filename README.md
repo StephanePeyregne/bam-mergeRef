@@ -21,10 +21,10 @@ We provide a make file to compile the code. You will need the bamtools library: 
 The two BAM files must be sorted by name before using ban-mergeRef. You can use samtools sort (http://www.htslib.org/doc/samtools.html) to sort your BAM files with the option -n.
 
 ## Example of command line
-
-bam-mergeRef -a <reference name 1> -b <reference name 2> <inputfile1> <inputfile2> <outputfile> -t <trashfile> 
-
-where reference names are IDs that will be saved in the header of the output BAM file and -t allows you to specify the name of the BAM file that will contain all the discarded alignments (optional). 
+```
+bam-mergeRef -a <reference name 1> -b <reference name 2> <input BAM file 1> <input BAM file 2> <output BAM file> -t [trashfile]
+```
+where reference names are IDs that will be saved in the header of the output BAM file. The option -t allows you to specify the name of a BAM file that will contain all discarded alignments. 
 
 ## Other relevant information:
 - Note that you should probably generate the MD field again on the output file, to have MD fields based on one reference only. 
