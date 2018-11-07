@@ -7,7 +7,7 @@ If one knows *a priori* polymorphic sites that are likely to differ between the 
 bam-mergeRef allows one to merge BAM files after they were aligned to different references. The merging proceeds as follows:
 - if a sequence aligns to both references at the same position , only one alignment is retained, chosen randomly;
 - if a sequence is mapped in one BAM file but unmapped in the other, the mapped sequence is retained;
-- if the same sequence is mapped at two different locations, both sequences are discarded (or collected in a second output BAM file if the user chooses this option)
+- if the same sequence is mapped at two different locations or has a different CIGAR string, both sequences are discarded (or collected in a second output BAM file if the user chooses this option)
 - unmapped sequences are discarded.
 
 This strategy allows to compensate for the reference bias at known polymorphic positions and has the additional advantage that further sequences are recovered.
