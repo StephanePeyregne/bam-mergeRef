@@ -14,7 +14,7 @@ This strategy allows to compensate for the reference bias at known polymorphic p
 
 ## Installation
 
-We provide a make file to compile the code. You will need the bamtools library: https://github.com/pezmaster31/bamtools/wiki/Building-and-installing
+We provide a make file to compile the code. You will need C++11 and the bamtools library: https://github.com/pezmaster31/bamtools/wiki/Building-and-installing
 
 ## Input
 
