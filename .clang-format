@@ -1,0 +1,41 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+BasedOnStyle: LLVM
+
+# indent 4 spaces
+IndentWidth: 4
+
+# break before function
+#BreakBeforeBraces: Linux
+BreakBeforeBinaryOperators: NonAssignment
+#BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: AfterColon
+AllowShortFunctionsOnASingleLine: false
+# Pas de saut de ligne entre type de retour et fonction
+AlwaysBreakAfterDefinitionReturnType: None
+PenaltyReturnTypeOnItsOwnLine: 300
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: true
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+  
+ColumnLimit: 100
+
+# arguments and parameters in same line or one line for each
+BinPackArguments: false
+BinPackParameters: false
+
+# keep up to two empty lines
+MaxEmptyLinesToKeep: 2
