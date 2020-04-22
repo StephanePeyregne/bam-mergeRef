@@ -14,7 +14,19 @@ This strategy allows to compensate for the reference bias at known polymorphic p
 
 ## Installation
 
-We provide a make file to compile the code. You will need C++11 and the bamtools library: https://github.com/pezmaster31/bamtools/wiki/Building-and-installing
+Make sure you've cloned with `--recursive`, to obtain the bamtools submodule.
+You'll additionally need libpopt-dev and zlib installed on your system.
+Then, it's possible to build using cmake:
+
+```
+cmake -H. -Bbuild && cmake --build build -- -j 4
+```
+
+To build a static release that might be portable to other systems:
+
+```
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_STATIC=1 -H. -Bbuild && cmake --build build -- -j 4
+```
 
 ## Input
 
